@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../0205NPU/rtl/00_TOP" --include "../../../../0205NPU/tb" \
+"../../../../0205NPU/rtl/02_SRAM/DP_SRAM.v" \
+"../../../../0205NPU/rtl/04_POOL/POOL_TOP.v" \
+"../../../../0205NPU/rtl/04_POOL/POOL_cal.v" \
+"../../../../0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v" \
+"../../../../0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v" \
+"../../../../0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v" \
+
+sv xil_defaultlib  --include "../../../../0205NPU/rtl/00_TOP" --include "../../../../0205NPU/tb" \
+"../../../../0205NPU/tb/testbench_POOL.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

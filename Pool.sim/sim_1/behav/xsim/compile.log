@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/02_SRAM/DP_SRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DP_SRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module POOL_TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_cal.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module POOL_cal
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module POOL_rd_SRAM_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module POOL_wr_SRAM_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_dfflrs
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_dfflr
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_dffl
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_dffrs
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_dffr
+INFO: [VRFC 10-311] analyzing module sirv_gnrl_ltch

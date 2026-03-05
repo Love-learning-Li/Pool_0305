@@ -1,0 +1,6 @@
+VCD info: dumpfile output/pool_tb.vcd opened for output.
+
+==================================
+	  result match      
+==================================
+tb/testbench_POOL.sv:123: $finish called at 46260 (1s)

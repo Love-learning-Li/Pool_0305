@@ -1,0 +1,15 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,1772580298,verilog,,,,,,,,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v,1772580862,verilog,,,,sirv_gnrl_dffl;sirv_gnrl_dfflr;sirv_gnrl_dfflrs;sirv_gnrl_dffr;sirv_gnrl_dffrs;sirv_gnrl_ltch,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/02_SRAM/DP_SRAM.v,1772580298,verilog,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_TOP.v,,DP_SRAM,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_TOP.v,1772580298,verilog,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_cal.v,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,POOL_TOP,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_cal.v,1772590133,verilog,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,POOL_cal,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v,1772590116,verilog,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,POOL_rd_SRAM_ctrl,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v,1772590142,verilog,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,POOL_wr_SRAM_ctrl,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/tasks_POOL.vh,1772580298,verilog,,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh,,,,,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/tasks_basic.vh,1772580298,verilog,,,,,,,,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/testbench_POOL.sv,1772581532,systemVerilog,,,D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/rtl/00_TOP/TOP_hardware_defines.vh;D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/tasks_basic.vh;D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/tasks_POOL.vh,testbench_POOL,,,../../../../0205NPU/rtl/00_TOP;../../../../0205NPU/tb,,,,,
+D:/ZhaoTenghaoDocument/SNN/20260304/Pool/Pool.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,

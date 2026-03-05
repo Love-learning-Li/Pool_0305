@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+
+==================================
+	  result match      
+==================================
+$finish called at time : 46260 ns : File "D:/ZhaoTenghaoDocument/SNN/20260304/Pool/0205NPU/tb/testbench_POOL.sv" Line 123
