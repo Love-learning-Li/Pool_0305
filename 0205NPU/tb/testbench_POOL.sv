@@ -29,6 +29,9 @@ bit rst_n;
 always #(`half_clk_period) clk=~clk;
 
 bit flag = 1;
+int total_case_cnt = 0;
+int pass_case_cnt  = 0;
+int fail_case_cnt  = 0;
 bit signed [`MAX_DAT_DW-1:0] dat_in[`CHin][`Hin][`Win];
 bit signed [`MAX_DAT_DW-1:0] software_dat_out[`CHout][`Hout][`Wout];
 bit signed [`MAX_DAT_DW-1:0] hardware_dat_out[`CHout][`Hout][`Wout];
@@ -63,6 +66,111 @@ wire [`MAX_DAT_DW-1:0]  o_wr_dat;
 wire [SRAM_ADDR_W-1:0] rd_addr_sram = o_rd_addr[SRAM_ADDR_W-1:0];
 wire [SRAM_ADDR_W-1:0] wr_addr_sram = o_wr_addr[SRAM_ADDR_W-1:0];
 
+task automatic clear_sram_all();
+    begin
+        for (int addr=0; addr<DEPTH; addr++) begin
+            u_dat_SRAM.mem[addr] = '0;
+        end
+    end
+endtask
+
+task automatic load_input_to_sram();
+    begin
+        for (int ch=0; ch<`CHin; ch++)
+            for (int h=0; h<`Hin; h++)
+                for (int w=0; w<`Win; w++)
+                begin
+                    int addr;
+                    addr = ((ch*`Hin + h) * `Win + w);
+                    u_dat_SRAM.mem[addr] = dat_in[ch][h][w];
+                end
+    end
+endtask
+
+task automatic fetch_hw_output_from_sram();
+    begin
+        for(int ch=0; ch<`CHout; ch++)
+            for(int oh=0; oh<`Hout; oh++)
+                for(int ow=0; ow<`Wout; ow++)
+                begin
+                    int addr;
+                    int out_base;
+                    out_base = `Win * `Hin * `CHin;
+                    addr = out_base + ((ch*`Hout + oh) * `Wout + ow);
+                    hardware_dat_out[ch][oh][ow] = u_dat_SRAM.mem[addr];
+                end
+    end
+endtask
+
+task automatic compare_with_golden(input string case_name);
+    bit case_pass;
+    begin
+        case_pass = 1'b1;
+        for(int ch=0; ch<`CHout; ch++)
+            for(int oh=0; oh<`Hout; oh++)
+                for(int ow=0; ow<`Wout; ow++)
+                begin
+                    if (hardware_dat_out[ch][oh][ow] != software_dat_out[ch][oh][ow]) begin
+                        case_pass = 1'b0;
+                        $display("[%s] mismatch [CH %0d][H %0d][W %0d], hw=%0d, sw=%0d",
+                                case_name, ch, oh, ow, hardware_dat_out[ch][oh][ow], software_dat_out[ch][oh][ow]);
+                    end
+                end
+
+        total_case_cnt++;
+        if (case_pass) begin
+            pass_case_cnt++;
+            $display("[CASE PASS] %s", case_name);
+        end else begin
+            fail_case_cnt++;
+            flag = 1'b0;
+            $display("[CASE FAIL] %s", case_name);
+        end
+    end
+endtask
+
+task automatic gen_case_directed_boundary();
+    begin
+        // Mixes min/max/negative/zero to stress max-pooling compare behavior.
+        for (int ch=0; ch<`CHin; ch++)
+            for (int h=0; h<`Hin; h++)
+                for (int w=0; w<`Win; w++) begin
+                    if ((h+w)%8 == 0)
+                        dat_in[ch][h][w] = 16'sh7fff;
+                    else if ((h+w)%8 == 1)
+                        dat_in[ch][h][w] = -16'sh8000;
+                    else if ((h+w)%8 == 2)
+                        dat_in[ch][h][w] = 16'sd0;
+                    else if ((h+w)%8 == 3)
+                        dat_in[ch][h][w] = -16'sd1;
+                    else
+                        dat_in[ch][h][w] = $signed((h*`Win + w) - 20);
+                end
+    end
+endtask
+
+task automatic gen_case_random(input int seed_offset);
+    int seed;
+    begin
+        seed = 32'h1234_0000 + seed_offset;
+        for(int ch=0; ch<`CHin; ch++)
+            for(int h=0; h<`Hin; h++)
+                for(int w=0; w<`Win; w++)
+                    dat_in[ch][h][w] = $random(seed);
+    end
+endtask
+
+task automatic run_one_case(input string case_name);
+    begin
+        clear_sram_all();
+        load_input_to_sram();
+        run_INT_POOL_software();
+        run_INT_POOL_hardware();
+        fetch_hw_output_from_sram();
+        compare_with_golden(case_name);
+    end
+endtask
+
 initial begin
     clk   = 0;
     rst_n = 0;
@@ -72,53 +180,21 @@ initial begin
     repeat(5) @(posedge clk);
     rst_n = 1;
 
-/////////////////////////////S2: generate test vectors    ////////////////////////////////
-    for(int ch=0; ch<`CHin; ch++)
-        for(int h=0; h<`Hin; h++)
-            for(int w=0; w<`Win; w++)
-                dat_in[ch][h][w] = $random();
+/////////////////////////////S2-S5: run directed + random regression ////////////////////////////////
+    gen_case_directed_boundary();
+    run_one_case("directed_boundary");
 
-    for(int ch=0; ch<`CHin; ch++)
-        for(int h=0; h<`Hin; h++)
-            for(int w=0; w<`Win; w++)
-            begin
-                int addr;
-                addr = ((ch*`Hin + h) * `Win + w);
-                u_dat_SRAM.mem[addr] = dat_in[ch][h][w];
-            end
-			
-/////////////////////////////S3: generate golden results  ////////////////////////////////
-    run_INT_POOL_software();
+    for (int i=0; i<5; i++) begin
+        gen_case_random(i);
+        run_one_case($sformatf("random_%0d", i));
+    end
 
-/////////////////////////////S4: hardware calculation     ////////////////////////////////
-    run_INT_POOL_hardware();
-
-    for(int ch=0; ch<`CHout; ch++)
-        for(int oh=0; oh<`Hout; oh++)
-            for(int ow=0; ow<`Wout; ow++)
-            begin
-                int addr;
-                int out_base;
-                out_base = `Win * `Hin * `CHin;
-                addr = out_base + ((ch*`Hout + oh) * `Wout + ow);
-                hardware_dat_out[ch][oh][ow] = u_dat_SRAM.mem[addr];
-            end
-			
-/////////////////////////////S5: compare                  ////////////////////////////////
-    for(int ch=0; ch<`CHout; ch++)
-        for(int oh=0; oh<`Hout; oh++)
-            for(int ow=0; ow<`Wout; ow++)
-            begin
-                if ( hardware_dat_out[ch][oh][ow] != software_dat_out[ch][oh][ow] ) begin
-                    flag=0;
-                    $display("mismatch! [CH %0d][H %0d][W %0d]=%0d, software=%0d",
-                             ch, oh, ow, hardware_dat_out[ch][oh][ow], software_dat_out[ch][oh][ow]);
-                end
-            end
+    $display("\n================ Regression Summary ================");
+    $display("TOTAL_CASE=%0d PASS_CASE=%0d FAIL_CASE=%0d", total_case_cnt, pass_case_cnt, fail_case_cnt);
     if(flag==1)
-        $display("\n==================================\n\t  result match      \n==================================");
+        $display("\n==================================\n\t  all case match      \n==================================");
     else
-        $display("\n==================================\n\t  result mismatch   \n==================================");
+        $display("\n==================================\n\t  case mismatch found \n==================================");
     
     #10 $finish;
 end
