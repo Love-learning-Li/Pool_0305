@@ -60,6 +60,7 @@ Total cases: <N>
 
 ### 2.3 在 Vivado 启动仿真
 - 确认仿真顶层模块为 `testbench_POOL_cal`。
+- 在 `sources` 模块右键点击 `Refresh Hierachy` 确保新生成的 `pool_cal_cases_auto.vh` 被调用。
 - 确认 `testbench_POOL_cal.tcl` 使用 `run all`。
 - 执行 `launch_simulation`。
 
@@ -159,6 +160,7 @@ CONSTRAINTS = {
 - 现象：只看到前几个 PASS。
 - 原因：仿真时长固定且过短（例如 `run 1000ns`）。
 - 处理：将 `testbench_POOL_cal.tcl` 设置为 `run all`。
+- 目前设定的默认值为run all
 
 ### 6.2 `Total cases` 与预期不一致
 - 检查：
@@ -177,17 +179,7 @@ CONSTRAINTS = {
   - 使用 `run all`。
   - 确认无外部超时设置提前结束仿真。
 
-## 7. 交付前检查清单
-
-将项目交给池化逻辑同学前，请确认：
-
-- `gen_pool_cal_cases.py` 参数已按当前回归目标设置。
-- `pool_cal_cases_auto.vh` 已重新生成并纳入版本管理。
-- `testbench_POOL_cal.sv` 已 include 生成文件并调用 `run_auto_cases()`。
-- `testbench_POOL_cal.tcl` 使用 `run all`。
-- 已完成一次全量仿真，并附带最终 summary 日志。
-
-## 8. 常用命令速查
+## 7. 常用命令速查
 
 生成 case：
 
