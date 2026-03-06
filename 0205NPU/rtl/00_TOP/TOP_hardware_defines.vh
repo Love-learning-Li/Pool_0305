@@ -13,6 +13,14 @@
 `define log2_K                      4
 `define log2_ADDR                   (`log2_CH + `log2_H + `log2_W + 2)
 
+///////////////////   POOL INTERNAL WIDTHS  ////////////////////
+`define POOL_CALC_DW                32
+`define POOL_CALC_MUL_DW            64
+
+///////////////////   TB DEFAULT SETTINGS   ////////////////////
+`define TB_POOL_CAL_HALF_CLK_PERIOD 10
+`define TB_POOL_CAL_TIMEOUT_NS      1000000
+
 ///////////////////   ON-CHIP WT BUF  ////////////////////
 `define SP_SRAM_NUM                 1
 `define log2_TOTAL_SP_SRAM_BITS     (25) //= 32Mb

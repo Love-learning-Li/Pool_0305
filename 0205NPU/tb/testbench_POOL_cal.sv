@@ -3,9 +3,6 @@
 
 module testbench_POOL_cal;
 
-localparam int HALF_CLK_PERIOD = 10;
-localparam int RANDOM_CASES = 20;
-localparam int RANDOM_WIN_MAX_LEN = 12;
 localparam signed [`MAX_DAT_DW-1:0] MIN_SIGNED = {1'b1, {(`MAX_DAT_DW-1){1'b0}}};
 
 bit clk;
@@ -40,7 +37,7 @@ int total_cnt;
 int pass_cnt;
 int fail_cnt;
 
-always #(HALF_CLK_PERIOD) clk = ~clk;
+always #(`TB_POOL_CAL_HALF_CLK_PERIOD) clk = ~clk;
 
 POOL_cal dut (
     .clk          (clk),
@@ -99,84 +96,7 @@ begin
 end
 endtask
 
-task automatic run_directed_cases;
-begin
-    // W0: single-point window
-    drive_beat(1'b1, 16'sd5,      1'b1, 1'b1);
-    check_last("W0_single_point", 16'sd5);
-
-    // W1: normal positive numbers
-    drive_beat(1'b1, 16'sd3,      1'b1, 1'b0);
-    drive_beat(1'b1, 16'sd12,     1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd7,      1'b0, 1'b1);
-    check_last("W1_positive", 16'sd12);
-
-    // W2: all negative numbers
-    drive_beat(1'b1, -16'sd8,     1'b1, 1'b0);
-    drive_beat(1'b1, -16'sd3,     1'b0, 1'b0);
-    drive_beat(1'b1, -16'sd20,    1'b0, 1'b1);
-    check_last("W2_all_negative", -16'sd3);
-
-    // W3: first beat invalid (padding-like behavior)
-    drive_beat(1'b0, 16'sd0,      1'b1, 1'b0);
-    drive_beat(1'b1, -16'sd1,     1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd4,      1'b0, 1'b1);
-    check_last("W3_first_invalid", 16'sd4);
-
-    // W4: all beats invalid -> MIN_SIGNED
-    drive_beat(1'b0, 16'sd0,      1'b1, 1'b0);
-    drive_beat(1'b0, 16'sd0,      1'b0, 1'b0);
-    drive_beat(1'b0, 16'sd0,      1'b0, 1'b1);
-    check_last("W4_all_invalid", MIN_SIGNED);
-
-    // W5: equal values tie
-    drive_beat(1'b1, 16'sd9,      1'b1, 1'b0);
-    drive_beat(1'b1, 16'sd9,      1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd8,      1'b0, 1'b1);
-    check_last("W5_equal_tie", 16'sd9);
-
-    // W6: random-like fixed sample
-    drive_beat(1'b1, -16'sd100,   1'b1, 1'b0);
-    drive_beat(1'b1, 16'sd45,     1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd23,     1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd102,    1'b0, 1'b0);
-    drive_beat(1'b1, -16'sd7,     1'b0, 1'b1);
-    check_last("W6_mixed_fixed", 16'sd102);
-
-    // W7: X-state vld should be ignored due to (vld === 1'b1)
-    drive_beat(1'b1, 16'sd2,      1'b1, 1'b0);
-    drive_beat(1'bx, 16'sd30000,  1'b0, 1'b0);
-    drive_beat(1'b1, 16'sd7,      1'b0, 1'b1);
-    check_last("W7_x_vld_ignored", 16'sd7);
-end
-endtask
-
-task automatic run_random_cases;
-    int case_id;
-    int win_len;
-    int beat;
-    logic vld;
-    logic signed [`MAX_DAT_DW-1:0] dat;
-    logic signed [`MAX_DAT_DW-1:0] exp_max;
-begin
-    for (case_id = 0; case_id < RANDOM_CASES; case_id++) begin
-        win_len = $urandom_range(1, RANDOM_WIN_MAX_LEN);
-        exp_max = MIN_SIGNED;
-
-        for (beat = 0; beat < win_len; beat++) begin
-            vld = ($urandom_range(0, 99) < 70);
-            dat = $signed($urandom_range(0, (1<<`MAX_DAT_DW)-1));
-            if (vld && (dat > exp_max)) begin
-                exp_max = dat;
-            end
-
-            drive_beat(vld, dat, (beat == 0), (beat == win_len-1));
-        end
-
-        check_last($sformatf("RND_%0d_len%0d", case_id, win_len), exp_max);
-    end
-end
-endtask
+`include "generated/pool_cal_cases_auto.vh"
 
 initial begin
     clk = 0;
@@ -224,8 +144,7 @@ initial begin
     i_cfg_Hout  = 8;
     i_cfg_Wout  = 8;
 
-    run_directed_cases();
-    run_random_cases();
+    run_auto_cases();
 
     $display("\n================ POOL_cal SUMMARY ================");
     $display("TOTAL=%0d PASS=%0d FAIL=%0d", total_cnt, pass_cnt, fail_cnt);
@@ -242,7 +161,7 @@ initial begin
 end
 
 initial begin
-    #1000000;
+    #(`TB_POOL_CAL_TIMEOUT_NS);
     $error("Timeout reached.");
     $finish;
 end

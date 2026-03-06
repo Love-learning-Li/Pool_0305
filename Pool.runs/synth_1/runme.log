@@ -1,0 +1,526 @@
+
+*** Running vivado
+    with args -log POOL_TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source POOL_TOP.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source POOL_TOP.tcl -notrace
+Command: synth_design -top POOL_TOP -part xc7z010clg400-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4980 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 647.414 ; gain = 240.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'POOL_TOP' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_TOP.v:3]
+INFO: [Synth 8-6157] synthesizing module 'POOL_rd_SRAM_ctrl' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:3]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:65]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:66]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:69]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:70]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:72]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:73]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:74]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:75]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:76]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:81]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:82]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:83]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:84]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:85]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:100]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized0' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized0' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized1' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized1' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized2' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized2' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized3' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 42 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized3' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized4' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized4' (1#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:290]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:291]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:293]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:294]
+INFO: [Synth 8-6155] done synthesizing module 'POOL_rd_SRAM_ctrl' (2#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'POOL_cal' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_cal.v:3]
+	Parameter MIN_SIGNED bound to: 16'sb1000000000000000 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_cal.v:37]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_cal.v:38]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_cal.v:39]
+INFO: [Synth 8-6157] synthesizing module 'sirv_gnrl_dfflr__parameterized5' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+	Parameter DW bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sirv_gnrl_dfflr__parameterized5' (2#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'POOL_cal' (3#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_cal.v:3]
+INFO: [Synth 8-6157] synthesizing module 'POOL_wr_SRAM_ctrl' [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:3]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:38]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:39]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:40]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:47]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:71]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'POOL_wr_SRAM_ctrl' (4#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'POOL_TOP' (5#1) [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_TOP.v:3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Kx[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Kx[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Kx[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Kx[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Ky[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Ky[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Ky[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Ky[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sx[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sx[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sx[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sx[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sy[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sy[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sy[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Sy[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Px[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Px[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Px[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Px[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Py[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Py[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Py[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Py[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[19]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[18]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[17]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[16]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[15]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[14]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[13]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[12]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[11]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[10]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[9]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[8]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[7]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[6]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[5]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[4]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_CHin[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[9]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[8]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[7]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[6]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[5]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[4]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Hin[0]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[9]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[8]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[7]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[6]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[5]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[4]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[3]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[2]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[1]
+WARNING: [Synth 8-3331] design POOL_wr_SRAM_ctrl has unconnected port i_cfg_Win[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port start
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Kx[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Kx[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Kx[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Kx[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Ky[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Ky[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Ky[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Ky[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sx[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sx[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sx[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sx[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sy[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sy[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sy[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Sy[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Px[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Px[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Px[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Px[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Py[3]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Py[2]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Py[1]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_Py[0]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[19]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[18]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[17]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[16]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[15]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[14]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[13]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[12]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[11]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[10]
+WARNING: [Synth 8-3331] design POOL_cal has unconnected port i_cfg_CHin[9]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 720.438 ; gain = 313.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 720.438 ; gain = 313.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 720.438 ; gain = 313.137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-3
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_rd_SRAM_ctrl.v:63]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/04_POOL/POOL_wr_SRAM_ctrl.v:44]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 720.438 ; gain = 313.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     42 Bit       Adders := 1     
+	   2 Input     42 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	               42 Bit    Registers := 4     
+	               32 Bit    Registers := 4     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     42 Bit        Muxes := 11    
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     20 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sirv_gnrl_dfflr 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module sirv_gnrl_dfflr__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module sirv_gnrl_dfflr__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+Module sirv_gnrl_dfflr__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 1     
+Module sirv_gnrl_dfflr__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               42 Bit    Registers := 1     
+Module sirv_gnrl_dfflr__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module POOL_rd_SRAM_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     42 Bit       Adders := 1     
+	   2 Input     42 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     42 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     20 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 1     
+Module sirv_gnrl_dfflr__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module POOL_cal 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+Module POOL_wr_SRAM_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     42 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     42 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP ch_base_in_next2, operation Mode is: C+A*B.
+DSP Report: operator ch_base_in_next2 is absorbed into DSP ch_base_in_next2.
+DSP Report: operator hin_win_uaddr is absorbed into DSP ch_base_in_next2.
+DSP Report: Generating DSP hin_win_uaddr, operation Mode is: A*B.
+DSP Report: operator hin_win_uaddr is absorbed into DSP hin_win_uaddr.
+DSP Report: Generating DSP out_base_uaddr, operation Mode is: A*B.
+DSP Report: operator out_base_uaddr is absorbed into DSP out_base_uaddr.
+DSP Report: operator out_base_uaddr is absorbed into DSP out_base_uaddr.
+DSP Report: Generating DSP u2_wr/total_wr_num0, operation Mode is: A*B.
+DSP Report: operator u2_wr/total_wr_num0 is absorbed into DSP u2_wr/total_wr_num0.
+DSP Report: Generating DSP u2_wr/total_wr_num, operation Mode is: A*B.
+DSP Report: operator u2_wr/total_wr_num is absorbed into DSP u2_wr/total_wr_num.
+DSP Report: operator u2_wr/total_wr_num is absorbed into DSP u2_wr/total_wr_num.
+DSP Report: Generating DSP u2_wr/total_wr_num, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator u2_wr/total_wr_num is absorbed into DSP u2_wr/total_wr_num.
+DSP Report: operator u2_wr/total_wr_num is absorbed into DSP u2_wr/total_wr_num.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|POOL_rd_SRAM_ctrl | C+A*B          | 10     | 10     | 42     | -      | 42     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|POOL_rd_SRAM_ctrl | A*B            | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|POOL_rd_SRAM_ctrl | A*B            | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|POOL_wr_SRAM_ctrl | A*B            | 20     | 10     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|POOL_wr_SRAM_ctrl | A*B            | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|POOL_wr_SRAM_ctrl | (PCIN>>17)+A*B | 14     | 11     | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:91]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/0_Vivado_prj_learn/Pool_0305/0205NPU/rtl/00_TOP/sirv_gnrl_dffs.v:91]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   152|
+|3     |DSP48E1 |     6|
+|4     |LUT1    |    73|
+|5     |LUT2    |   221|
+|6     |LUT3    |    79|
+|7     |LUT4    |    88|
+|8     |LUT5    |   115|
+|9     |LUT6    |   482|
+|10    |FDCE    |   365|
+|11    |IBUF    |   124|
+|12    |OBUF    |   104|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------------+----------------------------------+------+
+|      |Instance              |Module                            |Cells |
++------+----------------------+----------------------------------+------+
+|1     |top                   |                                  |  1810|
+|2     |  u0_rd               |POOL_rd_SRAM_ctrl                 |  1341|
+|3     |    u_addr_out_cur    |sirv_gnrl_dfflr__parameterized3_0 |    98|
+|4     |    u_addr_out_d1     |sirv_gnrl_dfflr__parameterized3_1 |    45|
+|5     |    u_ch              |sirv_gnrl_dfflr__parameterized2   |    47|
+|6     |    u_ch_base_in      |sirv_gnrl_dfflr__parameterized3_2 |    54|
+|7     |    u_ih_base         |sirv_gnrl_dfflr__parameterized4   |    52|
+|8     |    u_ih_base_mul_win |sirv_gnrl_dfflr__parameterized4_3 |   152|
+|9     |    u_iw_base         |sirv_gnrl_dfflr__parameterized4_4 |    54|
+|10    |    u_kx              |sirv_gnrl_dfflr__parameterized0   |    15|
+|11    |    u_ky              |sirv_gnrl_dfflr__parameterized0_5 |    13|
+|12    |    u_ky_mul_win      |sirv_gnrl_dfflr__parameterized4_6 |    46|
+|13    |    u_last_window_d1  |sirv_gnrl_dfflr_7                 |     1|
+|14    |    u_oh              |sirv_gnrl_dfflr__parameterized1   |    34|
+|15    |    u_ow              |sirv_gnrl_dfflr__parameterized1_8 |    34|
+|16    |    u_running         |sirv_gnrl_dfflr_9                 |   264|
+|17    |    u_win_first_d1    |sirv_gnrl_dfflr_10                |    18|
+|18    |    u_win_last_d1     |sirv_gnrl_dfflr_11                |     1|
+|19    |  u1_cal              |POOL_cal                          |    50|
+|20    |    u_max_val         |sirv_gnrl_dfflr__parameterized5   |    48|
+|21    |  u2_wr               |POOL_wr_SRAM_ctrl                 |   190|
+|22    |    u_running         |sirv_gnrl_dfflr                   |     3|
+|23    |    u_wr_cnt          |sirv_gnrl_dfflr__parameterized3   |   123|
++------+----------------------+----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 237 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 959.680 ; gain = 552.379
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 959.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 158 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1000.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1000.711 ; gain = 618.254
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1000.711 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'G:/0_Vivado_prj_learn/Pool_0305/Pool.runs/synth_1/POOL_TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file POOL_TOP_utilization_synth.rpt -pb POOL_TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  5 19:30:22 2026...
